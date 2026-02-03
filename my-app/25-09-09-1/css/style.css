@@ -1,0 +1,94 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 340px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px 30px 30px 30px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.input-area {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+#todo-input {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 180px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+#add-btn {
+  background: #f8a5b0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#add-btn:hover {
+  background: #f76c7c;
+}
+
+#todo-list {
+  text-align: left;
+  padding-left: 18px;
+  margin-top: 0;
+  width: 100%;
+  list-style-position: inside;
+}
+
+#todo-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+#todo-list li::marker {
+  font-weight: bold;
+  font-size: 16px;
+  color: #444;
+}
+
+.del-btn {
+  background: #19b5fe;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background 0.2s;
+  display: inline-block;
+}
+.del-btn:hover {
+  background: #0984e3;
+}

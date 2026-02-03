@@ -1,0 +1,408 @@
+body {
+  background: #000;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Orbitron", "Pretendard", "Consolas", monospace;
+  color: #00ff41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+
+/* --- Outer Border --- */
+.login-container {
+  border: 2px solid #00ff41;
+  box-shadow: 0 0 24px #00ff41, 0 0 8px #00ff41 inset;
+  border-radius: 10px;
+  padding: 0;
+  background: #000;
+  width: 370px;
+  margin: 32px auto;
+  position: relative;
+}
+
+/* --- Terminal Header --- */
+.cyber-terminal {
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 0 16px #00ff41 inset;
+  padding: 0 0 32px 0;
+  border: 2px solid #00ff41;
+  position: relative;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 0;
+  border-bottom: 1.5px solid #00ff41;
+  margin-bottom: 18px;
+  height: 36px;
+  background: #000;
+  border-radius: 8px 8px 0 0;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 6px;
+  margin-left: 12px;
+  margin-right: 10px;
+}
+.term-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #222;
+  border: 1.5px solid #00ff41;
+}
+.btn-red {
+  background: #ff0055;
+  border-color: #ff0055;
+}
+.btn-yellow {
+  background: #fffb00;
+  border-color: #fffb00;
+}
+.btn-green {
+  background: #00ff41;
+  border-color: #00ff41;
+}
+.terminal-title {
+  color: #00ff41;
+  font-size: 13px;
+  font-family: "Consolas", monospace;
+  letter-spacing: 1px;
+  flex: 1;
+  text-align: right;
+  margin-right: 18px;
+  margin-top: 2px;
+}
+
+/* --- Logo --- */
+.cyber-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.logo-frame {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #00ff41;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px #00ff41, 0 0 32px #00ff41 inset;
+  background: #000;
+  margin: 0 auto;
+}
+.logo-core svg {
+  color: #00ff41;
+  filter: drop-shadow(0 0 8px #00ff41);
+}
+.neon-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.cyber-title {
+  font-size: 2rem;
+  color: #00ff41;
+  margin: 12px 0 0 0;
+  letter-spacing: 2px;
+  font-family: "Orbitron", "Consolas", monospace;
+  text-shadow: 0 0 8px #00ff41, 0 0 2px #fff;
+  font-weight: bold;
+}
+.access-text {
+  color: #ff00cc;
+  font-size: 1rem;
+  margin-top: 6px;
+  margin-bottom: 0;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 4px #ff00cc;
+}
+
+/* --- Form Fields --- */
+.neon-form {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+.cyber-field {
+  margin-bottom: 18px;
+}
+.field-frame {
+  position: relative;
+  border: 1.5px solid #00ff41;
+  border-radius: 6px;
+  background: #000;
+  box-shadow: 0 0 8px #00ff41 inset;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.field-frame input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00ff41;
+  font-size: 1rem;
+  padding: 14px 12px 8px 16px;
+  width: 100%;
+  font-family: "Consolas", monospace;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+.field-frame label {
+  position: absolute;
+  left: 14px;
+  top: 4px;
+  color: #00ff41;
+  font-size: 0.95rem;
+  opacity: 0.7;
+  pointer-events: none;
+  font-family: "Consolas", monospace;
+  letter-spacing: 1px;
+  z-index: 3;
+}
+.cyber-toggle {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 4;
+}
+.cyber-toggle svg {
+  width: 20px;
+  height: 20px;
+  color: #00ff41;
+  filter: drop-shadow(0 0 4px #00ff41);
+}
+.cyber-error {
+  color: #ff00cc;
+  font-size: 0.85rem;
+  margin-left: 6px;
+  margin-top: 2px;
+  min-height: 18px;
+  display: block;
+}
+
+/* --- Checkbox & Link --- */
+.cyber-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  margin-top: -8px;
+}
+.neon-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.98rem;
+  color: #00ff41;
+}
+.checkbox-matrix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #00ff41;
+  border-radius: 4px;
+  margin-right: 7px;
+  background: #000;
+  box-shadow: 0 0 4px #00ff41 inset;
+  position: relative;
+}
+.neon-checkbox input[type="checkbox"] {
+  display: none;
+}
+.neon-checkbox input[type="checkbox"]:checked + .checkbox-matrix svg {
+  display: block;
+}
+.neon-checkbox .checkbox-matrix svg {
+  display: none;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+.checkbox-text {
+  color: #00ff41;
+  font-size: 0.98rem;
+  letter-spacing: 1px;
+}
+.cyber-link {
+  color: #ff00cc;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-family: "Consolas", monospace;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.cyber-link:hover {
+  color: #fff;
+  text-shadow: 0 0 4px #ff00cc;
+}
+
+/* --- Neon Button --- */
+.neon-button {
+  width: 100%;
+  padding: 12px 0;
+  background: #000;
+  border: 2px solid #00ff41;
+  border-radius: 6px;
+  color: #00ff41;
+  font-size: 1.1rem;
+  font-family: "Orbitron", "Consolas", monospace;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00ff41, 0 0 4px #00ff41 inset;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+  text-shadow: 0 0 8px #00ff41;
+}
+.neon-button:hover {
+  background: #00ff41;
+  color: #000;
+  box-shadow: 0 0 24px #00ff41, 0 0 8px #00ff41 inset;
+}
+
+/* --- Divider --- */
+.cyber-divider {
+  display: flex;
+  align-items: center;
+  margin: 18px 0 18px 0;
+}
+.divider-grid {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, #00ff41 0%, #000 100%);
+  border-radius: 1px;
+  opacity: 0.7;
+}
+.divider-text {
+  color: #00ff41;
+  font-size: 0.95rem;
+  margin: 0 10px;
+  font-family: "Consolas", monospace;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+/* --- Social Buttons --- */
+.matrix-social {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+  justify-content: center;
+}
+.social-matrix {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 0;
+  border: 2px solid #00ff41;
+  border-radius: 6px;
+  background: #000;
+  color: #00ff41;
+  font-family: "Consolas", monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #00ff41 inset;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+}
+.social-matrix:nth-child(1) {
+  border-color: #00ff41;
+  color: #00ff41;
+}
+.social-matrix:nth-child(2) {
+  border-color: #ff00cc;
+  color: #ff00cc;
+}
+.social-matrix svg {
+  filter: drop-shadow(0 0 4px currentColor);
+}
+.social-matrix:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* --- Signup --- */
+.matrix-signup {
+  text-align: center;
+  margin-top: 8px;
+}
+.signup-prefix {
+  color: #00ff41;
+  font-family: "Consolas", monospace;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+.matrix-link {
+  color: #ff00cc;
+  text-decoration: none;
+  font-family: "Consolas", monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 8px;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.matrix-link:hover {
+  color: #fff;
+  text-shadow: 0 0 4px #ff00cc;
+}
+
+/* --- Success Message --- */
+.cyber-success {
+  display: none;
+  text-align: center;
+  margin-top: 18px;
+}
+.success-title {
+  color: #00ff41;
+  font-size: 1.2rem;
+  margin: 12px 0 4px 0;
+  text-shadow: 0 0 8px #00ff41;
+}
+.success-desc {
+  color: #ff00cc;
+  font-size: 1rem;
+  margin-bottom: 0;
+  text-shadow: 0 0 4px #ff00cc;
+}
+
+/* --- Misc --- */
+::-webkit-input-placeholder {
+  color: #00ff41bb;
+}
+::-moz-placeholder {
+  color: #00ff41bb;
+}
+:-ms-input-placeholder {
+  color: #00ff41bb;
+}
+::placeholder {
+  color: #00ff41bb;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 98vw;
+    min-width: unset;
+    padding: 0;
+  }
+}
